@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>Calculadora IMC
+        </TITLE>
+        <style>
+            form input{
+                
+
+            }
+            form{
+                margin: 0 33%;
+                padding: 15px;
+                background: rgb(255, 227, 151);
+                border: rgb(255, 218, 115) 15px solid;
+                
+            }
+            body{
+            background-image: url('https://i.pinimg.com/originals/0c/09/9c/0c099cdb60af6b9c301fc86229619819.jpg');
+            }
+            h2{
+background: rgb(255, 227, 151);
+padding: 10px;
+border-radius: 20px;
+                border: rgb(255, 218, 115) 15px solid;
+color: rgb(255, 255, 255);
+            }
+        </style>
+	</HEAD>
+	<BODY>
+        <center>
+
+            <form  action="" onsubmit="calcular_imc(event)">
+                <input type="number" placeholder="altura" name="altura" id="altura" onchange="calcular_imc(event)">
+                <input type="number" placeholder= "peso" name="peso" id="peso" onchange="calcular_imc(event)">
+                <button type="submit"> calcular imc</button>
+            </form>
+            <hr>
+            <h2 id="resu"></h2>
+            </center>
+			<SCRIPT type="text/javascript">
+                //Este codigo ha sido generado por el modulo psexport 20180802-w32 de PSeInt.
+                //Es posible que el codigo generado no sea completamente correcto. Si encuentra
+                //errores por favor reportelos en el foro (http://pseint.sourceforge.net).
+                
+                function calcular_imc(event) {
+                    event.preventDefault();
+				var altura;
+				var peso;
+				altura = document.getElementById("altura").value;
+				peso = document.getElementById("peso").value;
+			
+				document.getElementById("resu").innerText = peso/(altura*altura);					
+			}
+			
+		</SCRIPT>
+	</BODY>
+</HTML>
